@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background: #dfe9f5;
+}
+.wrapper{
+	width: 330px;
+	padding: 2rem 1rem;
+	margin: 50px auto;
+	background-color: white;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+h1{
+	font-size: 2rem;
+	color: black;
+	margin-bottom: 1.2rem;
+}
+form input{
+	width: 92%;
+	outline: none;
+	border: 1px solid #fff;
+	padding: 12px 20px;
+	border-radius: 20px;
+	background: whitesmoke;
+}
+input[type="submit"]{
+	font-size: 1rem;
+	margin-top: 1.1rem;
+	padding: 10px 0;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+	width: 90%;
+	background: rgb(17, 107, 143);
+	cursor: pointer;
+	color: #fff;
+}
+input[type="submit"]:hover{
+	background: rgba(17, 107, 143, 0.877);
+}
+input:focus{
+	border: 1px solid rgb(192, 192, 192);
+}
+.terms input{
+	height: 1em;
+	width: 1em;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.terms label{
+	font-size: 0.7rem;
+}
+.terms a{
+	color: rgb(17, 107, 143);
+	text-decoration: none;
+}
+.member{
+	font-size: 0.8rem;
+	margin-top: 1.4rem;
+	color: #636363;
+}
+.member a{
+	color: rgb(17, 107, 143);
+	text-decoration: none;
+}
+.recover{
+	text-align: center;
+	font-size: 0.7rem;
+	margin: 0.3rem 1.4rem 0 0;
+}
+.recover a{
+	text-decoration: none;
+	color: #464647;
+}
+#text,#ptext,#ctext{
+	display: block;
+	color: #000;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 0.7rem;
+	text-align: left;
+    margin-left: 35px
+}
+.username{
+	margin-bottom: 10px;
+}
+ol{
+	padding: 25px;
+    text-align: justify;
+    font-size: 0.7rem;
+}
+p{
+	font-size: 0.8rem;
+    text-align: left;
+    padding: 20px;
+}
+button{
+	font-size: 0.8rem;
+	padding: 8px 12px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: limegreen;
+	color: whitesmoke;
+	transition: all 0.5s ease;
+}
+input[type="button"]:hover{
+	opacity: 0.8;
+}
+.btn{
+	text-align: left;
+	padding: 0px 25px;
+}
+/* Toast Message ------*/
+#toastBox{
+	height : auto;
+	position: fixed;
+	top: 1.25rem;
+    right: 0.0625rem;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 1.25rem;
+	color: black;
+    z-index: +2;
+}
+.toast{
+	width: 18.75rem;
+	height: 5rem;
+	background: white;
+	font-weight: 500;
+	margin: 0.9375rem 0;
+	box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	position: relative;
+	transform: translateX(100%);
+	animation: moveleft 0.5s linear forwards;
+}
+@keyframes moveleft{
+	100%{
+		transform: translateX(0);
+	}
+}
+.toast i{
+	margin: 0 1.25rem;
+	font-size: 2.1875rem;
+	color: green;
+}
+.toast.error i{
+	color: red;
+}
+.toast.invalid i{
+	color: orange;
+}
+.toast::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0.3125rem;
+	background: green;
+	animation: anim 3s linear forwards;
+}
+@keyframes anim{
+	100%{
+		width: 0;
+	}
+}
+.toast.error::after{
+	background: red;
+}
+.toast.invalid::after{
+	background: orange;
+}

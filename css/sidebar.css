@@ -1,0 +1,593 @@
+/* This CSS for side-bar and navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+body{
+    background-color: rgba(228, 231, 230, 0.603);
+}
+.side-bar{
+    background: #282a35;
+    backdrop-filter: blur(0.9375rem);
+    width: 14.375rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: 0.5s ease;
+    transition-property: left;
+}
+.logo{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.side-bar.active{
+    left: 0;
+}
+.menu{
+    width: 100%;
+    margin-top: 8.75rem;
+}
+.item{
+    position: relative;
+    cursor: pointer;
+}
+.item a{
+    color: white;
+    font-size: 0.875rem;
+    text-decoration: none;
+    display: block;
+    padding: 0rem 1.25rem;
+    line-height: 3.125rem;
+}
+.item a:hover{
+    background: #616475cc;
+    transition: 0.5s ease;
+}
+.item i{
+    margin-right: 0.9375rem;
+}
+.item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 1.125rem;
+    transition: 0.5s ease;
+}
+.item .sub-menu{
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+}
+.item .sub-menu a{
+    padding-left: 3.75rem;
+    font-size: 0.75rem;
+    line-height: 2.5rem;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+.close-btn{
+    position: absolute;
+    color: white;
+    font-size: 1.25rem;
+    right: 0;
+    margin: 1.5625rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+.menu-btn{
+    position: fixed;
+    color: white;
+    font-size: 1.25rem;
+    margin: 0.75rem;
+    cursor: pointer;
+}
+.nav-bar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0rem 3.75rem 0rem 15.625rem;
+    z-index: -1;
+    justify-content: space-between;
+    height: 8vh;
+    width: 100%;
+    background-color: #282a35;
+}
+.name{
+    color: white;
+}
+.profile a{
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+.profile a img{
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    margin-right: 1.25rem;
+}
+.profile .sub-menu{
+    position: absolute;
+    margin-top: 0.9rem;
+    background-color: white;
+    display: none;
+    margin-left: -80px;
+    height: 5.625rem;
+    width: 12rem;
+    border-radius: 0.3125rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0rem 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0rem 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0rem 0rem 0rem 0.0625rem inset;
+}
+.profile .sub-menu a{
+    text-decoration: none;
+    padding: 0.625rem;
+    color: black;
+    font-size: 15px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.profile .sub-menu a:hover{
+    opacity: 1;
+}
+.profile .sub-menu .fa-solid{
+    margin: 0rem 0.3125rem;
+}
+hr{
+    color: black;
+    opacity: 0.5;
+}
+.main{
+    height: auto;
+    width: 100%;
+    position: absolute;
+    padding: 8vh 0rem 0.625rem 14.375rem;
+    color: black;
+    z-index: -2;
+}
+.main-content{
+    width: 100%;
+    height: auto;
+    padding: 1.25rem;
+}
+.main-content h4{
+    padding-bottom: 1.25rem;
+}
+.boxes{
+    padding: 0.625rem;
+    border: 0.0625rem solid #bbbfc2;
+    background-color: white;
+    height: auto;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+  }
+.btn button{
+    width: 3.125rem;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    border: none;
+    background-color: #28a745;
+    color: white;
+  }
+  .btn button:hover{
+    opacity: 0.9;
+  }
+.box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.25rem;
+    padding: 0.625rem;
+    grid-template-rows: repeat(2, 9.375rem);
+}
+.vender-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5rem 5rem;
+    padding: 0rem 1rem;
+}
+.sales-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.3fr 0.3fr 0.3fr 0.5fr;
+  padding: 1rem 1rem;
+}
+.venders-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.3fr 0.2fr 0.2fr 0.1fr;
+  grid-template-rows: 5rem;
+}
+ .butns,.parti,.qtyi{
+  display: none;
+  float: right;;
+ }
+ #custo{
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 0.6fr;
+  align-items: end;
+ }
+.discounts{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+}
+label{
+    width: 100%;
+  }
+  input[type="text"],input[type="date"],input[type="password"]{
+    width: 95%;
+    padding: 0.5rem;
+    border-radius: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  input[type='number'] {
+    width: 3.125rem;
+    padding: 0.3125rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+}
+input[type='search'] {
+    padding: 0.3125rem;
+    font-size: 1rem;
+    outline: none;
+    width: 18.75rem;
+}
+.sear{
+  padding: 0px 10px;
+  align-items: end;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+  grid-template-rows: 60px;
+}
+.s_sear{
+  padding: 0px 10px;
+}
+  textarea{
+    padding: 0.3125rem;
+    outline: none;
+    font-size: 1rem;
+  }
+  select{
+    width: 90%;
+    padding: 0.5rem;
+    border-radius: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  .btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.625rem;
+    grid-row: 2/3;
+    grid-column: 4/5
+  }
+  .but1{
+    grid-row: 2/3;
+    grid-column: 4/5;
+  }
+  .but{
+    grid-row: 2/3;
+    grid-column: 5/6;
+  }
+  .s_btns{
+    grid-row: 2/3;
+    grid-column: 6/7;
+    text-align: right;
+    padding: 0px 20px;
+  }
+  .ss_btns{
+    margin-top: 35px;
+  }
+  .ss_btns img{
+    cursor: pointer;
+  }
+  input[type="button"],input[type="submit"]{
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    border: none;
+    color: white;
+    margin: 0.3125rem;
+    outline: none;
+  }
+  input[type="button"]:hover,input[type="submit"]:hover{
+    opacity: 0.9;
+  }
+  .btn1{
+    background-color: #007bff;
+  }
+  .btn2{
+    background-color: #dc3545;
+  }
+  .but2{
+    display: none;
+  }
+  .tbl{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .bichma{
+    text-align: center;
+  }
+  .sidema{
+    text-align: right;
+  }
+  .fa-pen-to-square{
+    font-size: 20px;
+  }
+  .btn5{
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  #response a{
+    cursor: pointer;
+  }
+  table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+  thead{
+    white-space: nowrap;
+    color: white;
+    background-color: #282a3a;
+  }
+  tbody{
+    white-space: nowrap;
+  }
+  td{
+    padding: 5px;
+  }
+  #response img{
+    width: 20px;
+  }
+  tr:nth-child(even){
+    background-color: #dddddd
+  }
+  .p_details{
+    display: none;
+  }
+  .open{
+    display: grid;
+    padding: 10px;
+  }
+  .close-tbl{
+    display: none;
+  }
+  .edits{
+    display: none;
+  }
+  .s_btnas{
+    display: grid;
+    grid-column: 6/7;
+    grid-row: 2/3;
+  }
+  .suc{
+    color: #28a745;
+  }
+/* ---------------------------------------------------*/
+
+/* ------------------- Dash Board CSS -------------------*/
+.dash-box{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 10px;
+  grid-template-rows: repeat(2, 150px);
+}
+.maind{
+  height: auto;
+  width: 100%;
+  position: absolute;
+  padding: 8vh 0px 10px 230px;
+  color: black;
+  z-index: -2;
+}
+.maind-content{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.itemsd{
+  border-radius: 5px;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+}
+.purchased{
+  background-color: #007bff;
+  border-radius: 5px;
+}
+.saled{
+  background-color: #17a2b8;
+  border-radius: 5px;
+}
+.customerd{
+  background-color: #E74C3C;
+  border-radius: 5px;
+}
+.venderd{
+  background-color: rgb(88, 81, 73);
+  border-radius: 5px;
+}
+.expd{
+  background-color: rgb(145, 128, 184);
+  border-radius: 5px;
+}
+.totald{
+  background-color: #28a745;
+  border-radius: 5px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.stockd{
+  background-color: #00cc66;
+  border-radius: 5px;
+}
+.purd h4{
+  font-size: 20px;
+}
+@media screen and (max-width: 800px) {
+   /* ------------------------CSS for navbar and side-bar --------------------------*/
+    .side-bar{
+        left: -100%;
+    }
+    .close-btn{
+        visibility: visible;
+    }
+    .nav-bar{
+        padding: 0rem 1.25rem 0rem 3.75rem;
+    }
+    .profile .sub-menu{
+        width: 7.5rem;
+    }
+    .main{
+        padding: 8vh 0rem 0.625rem 0.625rem;
+    }
+    .box{
+        grid-template-columns: 100%;
+        grid-template-rows: 9.375rem 9.375rem 9.375rem 9.375rem;
+    }
+    .main-content{
+        width: 100%;
+    }
+    .vender-info,.venders-info,.sales-info{
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 1.5625rem;
+        gap: 1.25rem;
+    }
+      input[type="text"],select{
+        width: 100%;
+      }
+      .btns{
+          justify-content: center;
+      }
+      .butns{
+        flex-direction: row-reverse;
+      }
+      .sear{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #custo{
+        width: 100%;
+        grid-template-columns: none;
+      }
+      .maind{
+        padding: 8vh 0px 10px 10px;
+    }
+    .dash-box{
+        grid-template-columns: 100%;
+        grid-template-rows: 150px 150px 150px 150px;
+    }
+    .maind-content{
+        width: 100%;
+    }
+      
+    /*-----------------------------------------------*/
+  }
+
+  /* Toast Message ------*/
+  #toastBox{
+	height : auto;
+	position: fixed;
+	top: 1.25rem;
+    right: 0.0625rem;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 1.25rem;
+	color: black;
+    z-index: +2;
+}
+.toast{
+	width: 18.75rem;
+	height: 5rem;
+	background: white;
+	font-weight: 500;
+	margin: 0.9375rem 0;
+	box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	position: relative;
+	transform: translateX(100%);
+	animation: moveleft 0.5s linear forwards;
+}
+@keyframes moveleft{
+	100%{
+		transform: translateX(0);
+	}
+}
+.toast i{
+	margin: 0 1.25rem;
+	font-size: 2.1875rem;
+	color: green;
+}
+.toast.error i{
+	color: red;
+}
+.toast.invalid i{
+	color: orange;
+}
+.toast::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0.3125rem;
+	background: green;
+	animation: anim 3s linear forwards;
+}
+@keyframes anim{
+	100%{
+		width: 0;
+	}
+}
+.toast.error::after{
+	background: red;
+}
+.toast.invalid::after{
+	background: orange;
+}
+/*-------------------------------------------------------*/
+.password-container{
+  width: 40%;
+  padding: 20px;
+}
+.password{
+  padding: 5px;
+}
+.pass-submit{
+  text-align: right;
+}
+/*------------Password -------------------------------*/
+
+
+/*---------------------------------------------------*/
